@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/avatar_image_view_size"
+        android:layout_height="@dimen/avatar_image_view_size"
+        android:layout_marginStart="@dimen/general_padding_and_margin"
+        android:layout_marginTop="@dimen/general_padding_and_margin"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/general_padding_and_margin"
+        android:ellipsize="end"
+        android:maxLines="@integer/text_view_max_lines"
+        android:textSize="@dimen/text_view_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+        tools:text="@tools:sample/lorem/random" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/br_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="iv_avatar,tv_name" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/divider_view_height"
+        android:layout_marginTop="@dimen/general_padding_and_margin"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/br_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

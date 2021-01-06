@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="general_padding_and_margin">16dp</dimen>
+    <dimen name="divider_view_height">1dp</dimen>
+    <dimen name="avatar_image_view_size">50dp</dimen>
+    <dimen name="recyclerview_to_toolbar_padding_top">66dp</dimen>
+    <dimen name="search_card_view_margin_horizontal">16dp</dimen>
+    <dimen name="search_card_view_margin_vertical">8dp</dimen>
+    <dimen name="general_card_view_radius">8dp</dimen>
+    <dimen name="text_view_size">16sp</dimen>
+    <dimen name="splash_lottie_animation_view_app_size">300dp</dimen>
+    <dimen name="splash_text_view_app_name_margin_top">8dp</dimen>
+    <dimen name="splash_text_view_app_name_size">32sp</dimen>
+    <dimen name="progress_bar_load_more_size">30dp</dimen>
+</resources>
