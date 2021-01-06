@@ -1,5 +1,8 @@
 package com.fahlepyrizal01.githubusers.presenter.fragment
 
+import android.content.Context
+import android.content.res.Configuration.UI_MODE_NIGHT_MASK
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +13,7 @@ import androidx.navigation.findNavController
 import com.fahlepyrizal01.githubusers.databinding.FragmentSplashBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import android.R.color as androidColorResource
 
 class SplashFragment : Fragment() {
 
@@ -27,6 +31,15 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        context?.isDarkTheme().let {
+            @Suppress("DEPRECATION")
+            binding.tvName.setTextColor(
+                resources.getColor(
+                    if (it == true) androidColorResource.white else androidColorResource.black
+                )
+            )
+        }
+
         lifecycleScope.launch {
             delay(THIRD_SECOND)
             super.getView()?.findNavController()?.navigate(
@@ -34,6 +47,10 @@ class SplashFragment : Fragment() {
             )
         }
 
+    }
+
+    private fun Context.isDarkTheme(): Boolean {
+        return resources.configuration.uiMode and UI_MODE_NIGHT_MASK == UI_MODE_NIGHT_YES
     }
 
     companion object {

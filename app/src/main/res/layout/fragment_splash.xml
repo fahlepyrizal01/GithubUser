@@ -30,6 +30,7 @@
         app:lottie_loop="true" />
 
     <TextView
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/splash_text_view_app_name_margin_top"
