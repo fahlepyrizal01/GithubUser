@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Github Users</string>
+    <string name="search_fragment_label">Search Fragment</string>
+    <string name="splash_fragment_label">Splash Fragment</string>
+    <string name="search_query_hint">Search Github users</string>
+    <string name="search_not_found">User Not Found</string>
+    <string name="load_more_empty_message">Already reached the end of the user.</string>
+    <string name="error_message">Sorry, something went wrong. :(</string>
+</resources>
