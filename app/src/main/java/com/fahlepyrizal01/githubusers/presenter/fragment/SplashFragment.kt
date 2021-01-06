@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
@@ -34,9 +33,11 @@ class SplashFragment : Fragment() {
 
         context?.isDarkTheme().let {
             @Suppress("DEPRECATION")
-            binding.tvName.setTextColor(resources.getColor(
-                if (it == true) androidColorResource.white else androidColorResource.black
-            ))
+            binding.tvName.setTextColor(
+                resources.getColor(
+                    if (it == true) androidColorResource.white else androidColorResource.black
+                )
+            )
         }
 
         lifecycleScope.launch {
